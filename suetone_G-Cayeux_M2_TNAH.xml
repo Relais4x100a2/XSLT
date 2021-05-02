@@ -1,0 +1,1069 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="out/suetone_G-Cayeux_M2_TNAH_ODD.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="out/suetone_G-Cayeux_M2_TNAH_ODD.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<!-- Excellent travail d'encodage, attention toutefois à votre usage de l'attribut @type sur les rdg qui n'est pas toujours homogène (+ je ne suis pas toujours d'accord avec votre choix de substantive) -->
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="lat">Vita Divi Iuli</title>
+            <title xml:lang="fr">Vie des douze Césars</title>
+            <author>
+               <persName>Suétone</persName>
+            </author>
+            <respStmt>
+               <resp>Encodage réalisé dans le cadre de l'évaluation finale du cours XML-TEI du
+                  Master 2 TNAH 2020/21</resp>
+               <persName>
+                  <forename>Guillaume</forename>
+                  <surname>Cayeux</surname>
+               </persName>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <p>Edition encodée par Guillaume CAYEUX, d'après SUETONE, Vie des douze Césars. Tome I :
+               César - Auguste, éd. et trad. Henri Ailloud, Paris, France, Les Belles Lettres, 1981,
+               L + 305 p. </p>
+         </publicationStmt>
+         <!-- Très bien -->
+         <sourceDesc>
+            <biblFull>
+               <titleStmt>
+                  <title xml:lang="lat">De vita duodecim Caesarum</title>
+                  <title xml:lang="fr">Vie des douze Césars</title>
+                  <author>
+                     <persName xml:lang="lat">Caius Suetonius Tranquillus</persName>
+                     <persName xml:lang="fr">Suétone</persName>
+                     <idno type="ISNI">0000000121029695</idno>
+                     <idno type="lcaf">https://data.bnf.fr/fr/11925729/suetone/</idno>
+                  </author>
+               </titleStmt>
+               <publicationStmt>
+                  <publisher>Les Belles Lettres</publisher>
+                  <date when-iso="1981">1981</date>
+                  <pubPlace>Paris</pubPlace>
+                  <availability status="restricted">
+                     <licence>Tous droits réservés. Utilisation d'un extrait dans le cadre de
+                        l'exception pédagogique</licence>
+                  </availability>
+               </publicationStmt>
+               <seriesStmt>
+                  <title xml:lang="lat">De vita duodecim Caesarum</title>
+                  <title xml:lang="fr">Vie des douze Césars</title>
+                  <biblScope unit="tome" n="1" xml:lang="fr">Tome 1: César - Auguste</biblScope>
+                  <biblScope unit="book" n="1" xml:lang="lat">Liber I - DIVVS IVLVS</biblScope>
+                  <biblScope unit="book" n="1" xml:lang="fr">Livre premier - César</biblScope>
+                  <biblScope unit="chapter" from="1" to="6">chapitre 1 à 6</biblScope>
+               </seriesStmt>
+            </biblFull>
+
+            <!-- index des témoins -->
+
+            <listWit>
+               <listWit xml:id="Codices">
+                  <head>Codices</head>
+
+                  <!-- Description du témoin M - regroupement des éditions dérivées autour de l'édition première  - voir documentation pour plus détail -->
+                  <listWit xml:id="M">
+                     <witness xml:id="M1"><abbr type="siglum">M</abbr> = Memmianus (Paris. 6115) -
+                           <date when="0800">9e siècle</date></witness>
+                     <witness xml:id="M2"><abbr type="siglum">M²</abbr> = corrector huius codicis -
+                           <date when="0800">9e siècle</date></witness>
+                  </listWit>
+
+                  <!-- Description du témoin G - regroupement des éditions dérivées autour de l'édition première  - voir documentation pour plus détail -->
+                  <listWit xml:id="G">
+                     <witness xml:id="G1"><abbr type="siglum">G</abbr> = Gudianus 268 - <date
+                           when="1000">11e siècle</date></witness>
+                     <witness xml:id="G2"><abbr type="siglum">G²</abbr> = correctores huius codicis
+                        - <date when="1000">11e siècle</date></witness>
+                     <witness xml:id="G3"><abbr type="siglum">G³</abbr> = correctores huius codicis
+                        - <date when="1000">11e siècle</date></witness>
+                     <witness xml:id="g"><abbr type="siglum">g</abbr> = codex Monacensis - <date
+                           when="1500">15e siècle</date></witness>
+                  </listWit>
+                  <witness xml:id="V"><abbr type="siglum">V</abbr> = Vaticanus 1904 - <date
+                        notBefore="1000" notAfter="1100">11-12e siècle</date></witness>
+
+                  <!-- Description du témoin L - regroupement des éditions dérivées autour de l'édition première  - voir documentation pour plus détail -->
+                  <listWit xml:id="L">
+                     <witness xml:id="L1"><abbr type="siglum">L</abbr> = Laurentianus 68,7 - <date
+                           notBefore="1000" notAfter="1100">11e-12e siècle</date></witness>
+                     <witness xml:id="L2"><abbr type="siglum">L²</abbr> = correctores huius codicis
+                        - <date notBefore="1000" notAfter="1100">11e-12e siècle</date></witness>
+                     <witness xml:id="L3"><abbr type="siglum">L³</abbr> = correctores huius codicis
+                        - <date notBefore="1000" notAfter="1100">11e-12e siècle</date></witness>
+                  </listWit>
+
+                  <!-- Description du témoin P - regroupement des éditions dérivées autour de l'édition première  - voir documentation pour plus détail -->
+                  <listWit xml:id="P">
+                     <witness xml:id="P1"><abbr type="siglum">P</abbr> = Suessionensis 19 - <date
+                           when="1100">12e siècle</date></witness>
+                     <witness xml:id="P2"><abbr type="siglum">P²</abbr> = corrector huius codicis -
+                           <date when="1100">12e siècle</date></witness>
+                  </listWit>
+
+                  <!-- Description du témoin O - regroupement des éditions dérivées autour de l'édition première  - voir documentation pour plus détail -->
+                  <listWit xml:id="O">
+                     <witness xml:id="O1"><abbr type="siglum">O</abbr> = Laurentianus 66,39 - <date
+                           when="1100">12e siècle</date></witness>
+                     <witness xml:id="O2"><abbr type="siglum">O²</abbr> = corrector huius codicis -
+                           <date when="1100">12e siècle</date></witness>
+                  </listWit>
+
+                  <witness xml:id="S"><abbr type="siglum">S</abbr> = Montepessulanus 117 - <date
+                        when="1100">12e siècle</date></witness>
+
+                  <witness xml:id="T"><abbr type="siglum">T</abbr> = Berolinensis lat. fol. 337 -
+                        <date when="1300">14e siècle</date></witness>
+
+                  <!-- Description du témoin Π - regroupement des éditions dérivées autour de l'édition première - voir documentation pour plus détail -->
+                  <listWit xml:id="Π">
+                     <witness xml:id="Π1"><abbr type="siglum">Π</abbr> = Parisinus 616 - <date
+                           when="1100">12e siècle</date></witness>
+                     <witness xml:id="Π2"><abbr type="siglum">Π²</abbr> = corrector huius codicis -
+                           <date when="1200">12e siècle</date></witness>
+                  </listWit>
+
+                  <!-- Description du témoin Q - regroupement des éditions dérivées autour de l'édition première  - voir documentation pour plus détail -->
+                  <listWit xml:id="Q">
+                     <witness xml:id="Q1"><abbr type="siglum">Q</abbr> = Parisinus 5802 - <date
+                           when="1100">12e siècle</date></witness>
+                     <witness xml:id="Q2"><abbr type="siglum">Q²</abbr> = corrector huius codicis -
+                           <date when="1100">12e siècle</date></witness>
+                  </listWit>
+
+                  <witness xml:id="ε"><abbr type="siglum">ε</abbr> = Suessionensis 19 - <date
+                        when="1200">13e siècle</date></witness>
+
+                  <witness xml:id="R"><abbr type="siglum">R</abbr> = Regius Londinensis 15. C. III -
+                        <date when="1100">12e siècle</date></witness>
+
+                  <witness xml:id="ρ"><abbr type="siglum">ρ</abbr> = Refius Londinensis 15. C. IV -
+                        <date when="1200">13e siècle</date></witness>
+
+                  <witness xml:id="dett."><abbr type="siglum">dett.</abbr> = codd. multi in quibus δ
+                     (Paris. 5804) - <date when="1400">15e siècle</date></witness>
+
+               </listWit>
+
+               <listWit xml:id="Excerpta">
+                  <head>Excerpta</head>
+                  <witness xml:id="H"><abbr type="siglum">H</abbr> = Parisinus 8818 - <date
+                        when="1000">11e siècle</date></witness>
+                  <witness xml:id="N"><abbr type="siglum">N</abbr> = Parisinus 17903 - <date
+                        when="1200">13e siècle</date></witness>
+               </listWit>
+
+
+               <listWit xml:id="Editiones_principes">
+                  <head>Editiones principes</head>
+                  <witness xml:id="Rom.I"><abbr type="siglum">Rom.I</abbr> = ed. Ioh. Antonii
+                     Campani - <date when="1470">1470</date></witness>
+                  <witness xml:id="Rom.II"><abbr type="siglum">Rom.II</abbr> = ed. Ioh. Andrae -
+                        <date when="1471">1471</date></witness>
+                  <witness xml:id="Ven.I"><abbr type="siglum">Ven.I</abbr> = ed. Veneta - <date
+                        when="1471">1471</date></witness>
+               </listWit>
+
+
+               <listWit xml:id="other_wits">
+                  <head>Autres témoins:</head>
+                  <listWit xml:id="other_wits_in">
+                     <head>Autres témoins cités dans l'édition des Belles Lettres mais non
+                        référencés dans la table des sigles</head>
+
+                     <listWit>
+                        <head>Témoins cités dans l'introduction</head>
+                        <witness xml:id="Casuabon"><abbr type="siglum">Casuabon</abbr> :
+                              <persName>Isaac Casaubon</persName>. 2e édition publiée à Paris en
+                              <date when="1610">1610</date></witness>
+                        <witness xml:id="Oudendorp"><abbr type="siglum">Oudendorp</abbr> :
+                              <persName>François Oudendorp</persName>. Edition publiée à Leyde en
+                              <date when="1751">1751</date></witness>
+                        <witness xml:id="Graevius"><abbr type="siglum">Graevius</abbr> :
+                              <persName>Johann Georg Grævius</persName>. Editions publiées à
+                           Utrecht, en<date notBefore="1672" notAfter="1703">1672, 1691,
+                           1703</date></witness>
+                     </listWit>
+
+                     <listWit>
+                        <head>Témoins cités uniquement dans les apparats critiques</head>
+                        <witness xml:id="Scriverius"><abbr type="siglum">Scriverius</abbr> :
+                              <persName>Pyeter Schryver<surname>Scriverius</surname></persName>.
+                              <date notBefore="1576" notAfter="1660">1576-1660</date></witness>
+                        <witness xml:id="Orsini"><abbr type="siglum">Orsini</abbr> :
+                              <persName>Fulvio Orsini</persName>
+                           <date notBefore="1529" notAfter="1600">1529-1600</date></witness>
+                        <witness xml:id="Torrentius"><abbr type="siglum">Torrentius</abbr> :
+                              <persName>Lieven van der Beke <surname>Laevinus
+                              Torrentius</surname></persName>
+                           <date notBefore="1525" notAfter="1595">1525–1595</date></witness>
+                        <!-- Témoin que nous n'avons pas réussi à identifier -->
+                        <witness xml:id="δ"><abbr type="siglum">δ</abbr> : témoin non
+                           identifié</witness>
+                     </listWit>
+
+                     <listWit xml:id="other_wits_ext">
+                        <head>Témoin extérieur à l'édition des Belles Lettres</head>
+                        <witness xml:id="Remacle">Edition en ligne de <persName>Philippe
+                              Remacle</persName><note> Philippe Remacle (1944-2011) est un latiniste
+                              et helléniste belge francophone, professeur de langues anciennes. Il a
+                              créé et développé un site web consacré aux auteurs antiques reconnu
+                              comme une référence et un outil de travail pour les étudiants et
+                              chercheurs francophones dans le domaine des langues
+                              anciennes.</note><date notBefore="1944" notAfter="2011"
+                              >1944-2011</date></witness>
+                     </listWit>
+                  </listWit>
+               </listWit>
+            </listWit>
+            <!-- Très bien -->
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <settingDesc>
+            <listPlace>
+               <place xml:id="Rome">
+                  <placeName>Roma</placeName>
+                  <note>Rome antique</note>
+               </place>
+
+
+               <place xml:id="Mytilene">
+                  <placeName>Mytilène</placeName>
+                  <note>Principale ville de Lesbos. La prise de Mytilène s'inscrit dans le
+                     prolongement de la seconde guerre contre Mithridate (83-82)</note>
+               </place>
+
+
+               <place xml:id="Rhodes">
+                  <placeName>Rhodes</placeName>
+                  <note>«A partir de la fin du IIe siècle, Rhodes apparaît comme le centre
+                     universitaire le plus actif et le plus florissant : contrainte par la victoire
+                     romaine d'abandonner l'hégémonie de l'Égée qui, un moment, avait fait sa
+                     grandeur et sa fortune (c'est Délos qui lui succède comme grand port
+                     international), Rhodes trouve dans la renommée de ses écoles une nouvelle
+                     source de gloire : écoles de grammaire… écoles de philosophie… écoles, surtout,
+                     de rhétorique…» (H.- I. Marrou, Histoire de l'éducation dans l'antiquité, 5e
+                     éd., Paris, 1960, p.294).</note>
+               </place>
+
+               <place xml:id=" Izmit">
+                  <placeName>Bithynia</placeName>
+                  <note>La Bithynie (grec ancien : Βιθύνια / Bithýnia) est une région historique de
+                     l'Asie mineure située sur la côte nord, entre le détroit du Bosphore, la
+                     Propontide, le Pont Euxin, la Paphlagonie, et bornée au sud par la Galatie et
+                     la Phrygie. Les villes principales de Bithynie sont Nicomédie et Nicée, qui se
+                     disputent le titre de capitale selon l'époque, ainsi qu'Héraclée du Pont, Pruse
+                     (actuelle Bursa) et Chalcédoine. Elle est actuellement située en
+                     Turquie.</note>
+               </place>
+
+               <place xml:id="Adana">
+                  <placeName>Cilicie</placeName>
+                  <note>Région du sud de l'Asie mineure, érigée en province en 80. Son premier
+                     gouverneur sera Dolabella, remplacé en 78 par Servilius Isauricus.</note>
+               </place>
+
+               <place xml:id="Farmakonisi">
+                  <placeName>Iles Pharmacuse</placeName>
+                  <note>Petite île au sud de Milet. Plutarque (César, 2, 2) précise que ces pirates
+                     venaient de Cilicie.</note>
+               </place>
+            </listPlace>
+         </settingDesc>
+         <particDesc>
+            <!-- liste des personnes qui apparaissent dans le texte -->
+            <listPerson>
+               <person xml:id="Cossutia">
+                  <persName>Cossutia</persName>
+                  <idno/>
+                  <note>Cossutia (Ier siècle av. J.-C.), femme romaine noble du 1er siècle av. J.-C.
+                     Sa famille faisait partie de la gens des Cossutii, une famille de la noblesse
+                     équestre de Rome et probablement originaire de Corinthe. Selon Suétone (Jules
+                     César, I) elle fut fiancée à Jules César vers 84 av. J.-C., alors que celui-ci
+                     portait la toge prétexte. Il la répudia un an plus tard pour épouser Cornélie,
+                     fille de Cinna. Mais Plutarque ne se limite pas au fait que Jules César se
+                     fiança avec elle, laissant planer le doute sur un éventuel mariage.<ref
+                        target="https://fr.wikipedia.org/wiki/Cossutia">(Source
+                     Wikipedia)</ref></note>
+               </person>
+
+               <person xml:id="Cornelia_Sulla">
+                  <persName>Cornelia Sulla</persName>
+                  <persName>Cornelia Sylla</persName>
+                  <idno/>
+                  <note>Cornelia Sylla, ou Sulla, est une des rares femmes romaines citées dans les
+                     sources de la République romaine. Elle est l'aînée des enfants du dictateur
+                     romain Lucius Cornelius Sulla, dit Sylla, et d'une de ses premières épouses,
+                     Ilia ou Élia. Elle naît en 109 av. J.-C., sous le consulat de Quintus Caecilius
+                     Metellus Numidicus et de Marcus Junius Silanus. Son père la marie en premières
+                     noces avec Pompeius Rufus le jeune (aussi appelé Quintus Pompeius Rufus II), le
+                     fils de son co-consul de 88 av. J.-C., Quintus Pompeius Rufus, un lointain
+                     cousin de Pompée. Ils ont ensemble deux enfants : Quintus Pompeius Rufus III et
+                     Pompeia, future épouse de Jules César. Mais son mari est assassiné durant les
+                     révoltes du Forum Romanum en 88 av. J.-C., trois ans après leur mariage, et
+                     Cornelia se remarie avec Mamercus Aemilius Lepidus Livianus, le princeps
+                     senatus. Ils n'ont pas d'enfants ensemble et elle suit par la suite son père
+                     lors de son exil jusqu'à son retour en triomphe à Rome en 80 av. J.-C. Nous ne
+                     savons pas ce qu'elle devient après la mort de Sylla en 78 av. J.-C.<ref
+                        target="https://fr.wikipedia.org/wiki/Cornelia_Sylla">(Source
+                        Wikipedia)</ref></note>
+               </person>
+
+               <person xml:id="Lucius_Cornelius_Cinna_consul_87">
+                  <persName>Lucius Cornelius Cinna</persName>
+                  <idno type="VIAF">https://viaf.org/viaf/45108113/</idno>
+                  <note>Lucius Cornelius Cinna (mort en 84 av. J.-C. à Ancône), partisan de Marius,
+                     est consul sans interruption de 87 av. J.-C. à 84 av. J.-C., et règne par la
+                     terreur sur Rome par ses proscriptions. Il veut faire rappeler d'exil Caius
+                     Marius, malgré l'opposition de son collègue Octavius, mais le Sénat le
+                     dépouille de son titre de consul au profit de Lucius Cornelius Merula et le
+                     chasse de la ville. Furieux, il rassemble une armée, marche sur Rome accompagné
+                     de Marius, de Cnaeus Papirius Carbo et de Sertorius, s'empare de la ville,
+                     assemble le peuple, fait prononcer solennellement le rappel de Marius et
+                     devient le complice de ses cruautés. Il est massacré en 84 av. J.-C., au cours
+                     de la sédition de ses propres soldats. Il a été consul quatre ans de suite
+                     (87-84), en contravention avec la loi d’espacement des mandats. Il a eu un fils
+                     Lucius Cornelius Cinna et une fille Cornelia Cinna, laquelle épouse Jules César
+                     en 84 av. J.-C., et lui donne en 83 av. J.-C. son seul enfant légitime, sa
+                     fille Julia.<ref
+                        target="https://fr.wikipedia.org/wiki/Lucius_Cornelius_Cinna_(consul_en_-87)"
+                        >(Source Wikipedia)</ref></note>
+               </person>
+
+               <person xml:id="Lucius_Cornelius_Cinna_fils">
+                  <persName>Lucius Cornelius Cinna</persName>
+                  <idno/>
+                  <note>Lucius Cornelius Cinna est un homme politique du dernier siècle de la
+                     République romaine. Il est le fils de Lucius Cornelius Cinna, adjoint de Marius
+                     puis chef du parti des populares. En 84 av. J.-C., son père, consul pour la
+                     quatrième fois, est tué au cours d’une sédition militaire. En novembre 82 av.
+                     J.-C., Sylla bat les marianistes, s'installe à Rome et fait afficher les listes
+                     de proscrits. Le jeune Lucius Cornelius Cinna figure sur la première liste,
+                     mais parvient à échapper aux poursuites et à la mort. Il soutient le consul
+                     Marcus Aemilius Lepidus, mais doit se réfugier en Hispanie auprès de Sertorius
+                     après l’échec de l’insurrection de Aemilius Lepidus en 77 av. J.-C.. César, qui
+                     avait épousé sa sœur Cornelia Cinna, contribue à son rappel à Rome. Mais la loi
+                     de proscription de Sylla interdit à Cinna toute vie politique, en raison de sa
+                     parenté. En 49 av. J.-C., la loi promulguée par Jules César amnistie les
+                     victimes de Sylla et redonne enfin son honorabilité à Cinna. En 46 av. J.-C.,
+                     il épouse Pompeia, fille de Pompée et veuve de Sylla Faustus. Elle lui donne un
+                     fils, Gnaeus Cornelius Cinna Magnus, qui porte le prénom et le cognomen de son
+                     grand-père maternel. Jules César qui détient désormais le pouvoir absolu lui
+                     confère pour l’année 44 av. J.-C. la charge de préteur4. Cinna ne prend pas
+                     part au meurtre de Jules César en mars 44 av. J.-C., mais il rejoint Brutus et
+                     les autres conjurés à la tribune du Capitole. Grâce à son prestige, Brutus se
+                     fait écouter du peuple en parlant prudemment de paix civile. Cinna prend la
+                     parole après lui. Lorsqu’il commence à accuser César de tyrannie, une partie de
+                     la foule s’indigne et l’injurie violemment. Lors des funérailles de César,
+                     comme il suit le cortège funèbre, il est pris à partie par des vétérans de
+                     César et ceux qui l'avaient hué la veille. Il parvient à se réfugier dans une
+                     maison, et est sauvé par les soldats de Lépide, maître de cavalerie de César,
+                     avant que cette maison ne soit incendiée6. Peu après, la foule en colère,
+                     croyant rencontrer de nouveau Cinna, tue à sa place son homonyme, le poète et
+                     tribun de la plèbe Caius Helvius Cinna. Lorsque selon l’usage le Sénat attribue
+                     des provinces aux préteurs de l'année 44, dont les conjurés Brutus et Cassius,
+                     Cinna refuse toute attribution, choix que Cicéron qualifie de vertueux. Dans la
+                     rivalité qui opposait Octave à Marc Antoine, Cinna prit le parti d'Antoine.
+                     Octave (futur Auguste) victorieux ne lui en tint pas rigueur et lui permit même
+                     de faire une carrière politique.<ref
+                        target="https://fr.wikipedia.org/wiki/Lucius_Cornelius_Cinna_(pr%C3%A9teur)"
+                        >(Source Wikipedia)</ref></note>
+               </person>
+
+               <person xml:id="Julia_Caesaris_fille">
+                  <persName>Julia Caesaris<genName>, fille de César</genName></persName>
+                  <idno/>
+                  <note>Julia est née en 76 av. J.-C. Après la mort de sa mère en couches en 682,
+                     elle est élevée par sa grand-mère paternelle Aurelia Cotta. Son père la fiance
+                     à Quintus Servilius Caepio, qui pourrait être Marcus Junius Brutus (l'assassin
+                     le plus connu de César) qui après avoir été adopté par son oncle Quintus
+                     Servilius Caepio, prit le nom de Quintus Servilius Caepio Brutus pour une durée
+                     inconnue. César rompt les fiançailles et la marie en 59 av. J.-C. à Pompée avec
+                     qui il cherche une forte alliance politique pour asseoir le premier triumvirat.
+                     [...] Lors de l'élection des édiles de 55 av. J.-C., Pompée est encerclé par
+                     une foule nerveuse et sa toge est salie par du sang de manifestants. Un esclave
+                     rapporte la toge à la maison et est vu par Julia. S'imaginant que son mari a
+                     été tué, elle fait une fausse couche. Sa santé en est affaiblie et en août de
+                     l'année suivante, elle meurt en couches. Son enfant, un garçon selon certains
+                     auteurs, une fille selon d'autres, ne lui survit que quelques jours. [...]
+                     Après la mort de Julia, l'alliance de Pompée et César commence à faiblir ce qui
+                     entraîne la Guerre civile de César. César voua une cérémonie aux mânes de Julia
+                     et organisa en 46 av. J.-C. des jeux funéraires avec combats de gladiateurs. La
+                     date de la cérémonie fut choisie pour coïncider avec les ludi Veneris
+                     Genetricis du 26 septembre, les fêtes en l'honneur de Vénus Genetrix, l'ancêtre
+                     des Iulii. Enfin, selon Suétone, le jour où Auguste entra à Rome en tant que
+                     fils adoptif de César (en mai 44 av. J.-C.), le monument de Julia fut frappé
+                     par l'éclair. <ref
+                        target="https://fr.wikipedia.org/wiki/Julia_(fille_de_Jules_C%C3%A9sar)"
+                        >(Source Wikipedia)</ref></note>
+               </person>
+
+               <person xml:id="Lucius_Cornelius_Sulla">
+                  <persName>Lucius Cornelius Sulla <addName type="suffixe">Felix</addName><surname>
+                        Sulla</surname></persName>
+                  <persName>Lucius Cornelius Sylla <addName type="suffixe">Felix</addName><surname>
+                        Sylla</surname></persName>
+                  <idno type="VIAF">https://viaf.org/viaf/84037378/</idno>
+                  <note>L.Cornelius Sylla Felix, 138 - 79 a.C. Issu d'une vieille famille
+                     patricienne, Sylla commence sa carrière sous les ordres de Marius, dans la
+                     guerre contre Jugurtha. Préteur urbain en 97, il part ensuite comme propréteur
+                     en Cilicie (Asie mineure). Sylla participe brillamment à la Guerre sociale
+                     (91-87 : révolte des « alliés » italiens contre Rome) et obtient le consulat en
+                     88. Sa rivalité avec Marius, chef du parti populaire, va déclencher la première
+                     guerre civile. Sylla en sort vainqueur et est nommé dictateur en 81 : il fait
+                     afficher des listes de proscription contre ses ennemis politiques et prend
+                     toute une série de mesures destinées principalement à renforcer les pouvoirs du
+                     Sénat. En 79, Sylla abdique et meurt peu de temps après. Cf. F. Hurlet, La
+                     dictature de Sylla : Monarchie ou magistrature républicaine ? Essai d'histoire
+                     constitutionnelle, Bruxelles - Rome, 1993.<ref
+                        target="http://bcs.fltr.ucl.ac.be/SUET/CAES/1.htm">(Source BIBLIOTHECA
+                        CLASSICA SELECTA (BCS))</ref></note>
+               </person>
+
+               <person xml:id="Mamercus_Æmilius_Lepidus_Livianus">
+                  <persName>Mamercus Æmilius Lepidus Livianus </persName>
+                  <idno/>
+                  <note>Mamercus Aemilius Lepidus Livianus est un homme politique romain. Il est le
+                     frère de Marcus Livius Drusus. Il est adopté par la famille des Aemilii Lepidi,
+                     et a épousé une fille de Lucius Cornelius Sulla, Cornelia Sylla. Il semble
+                     avoir été le princeps senatus du sénat sous Sylla. Selon Suétone, il aurait
+                     intercédé en faveur de César pour lui permettre d'échapper aux proscriptions de
+                     Sylla lors de la dictature de ce dernier. En 77 av. J.-C., il est consul.<ref
+                        target="https://fr.wikipedia.org/wiki/Mamercus_%C3%86milius_Lepidus_Livianus"
+                        >(Source Wikipedia)</ref></note>
+               </person>
+
+               <person xml:id="Aurelius_Cotta">
+                  <persName>Caius Aurelius Cotta</persName>
+                  <idno type="VIAF">https://viaf.org/viaf/17614022/</idno>
+                  <note> En 92 av. J.-C., Caius Aurelius Cotta plaide pour la défense de son oncle
+                     Publius Rutilius Rufus qui fut accusé injustement d'extorsion en Asie. Il était
+                     en très bons termes avec le tribun de la plèbe Marcus Livius Drusus, qui fut
+                     assassiné en 91 av. J.-C., et ne réussit pas dans sa candidature de tribun. Un
+                     peu après il fut poursuivi en justice et, pour éviter d'être condamné, il
+                     s'exila. Il ne revint pas à Rome durant la dictature de Lucius Cornelius Sulla
+                     (Sylla) en 82 a. J.-C.. Il fut consul en 75 av. J.-C. et commença les
+                     hostilités contre les optimates en votant une loi qui abolit les dispositions
+                     de Sylla qui disqualifiaient les tribuns d'accès au cursus honorum (Lex Aurelia
+                     de tribunicia potestate). Dans son histoire des orateurs romains, Cicéron le
+                     présente avec Publius Sulpicius Rufus comme les meilleurs jeunes orateurs de
+                     leur temps. Cicéron le met aussi en scène dans le De oratore et dans De Natura
+                     Deorum, comme porte-parole des positions de la Nouvelle Académie.Certains
+                     commentateurs le présentent comme l'oncle maternel de César.<ref
+                        target="https://fr.wikipedia.org/wiki/Caius_Aurelius_Cotta_(consul_en_-75)"
+                        >(Source Wikipedia)</ref></note>
+               </person>
+
+               <person xml:id="Caesar">
+                  <persName>Caius Iulius Caesar IV <addName>Divus
+                        </addName><surname>Caesar</surname></persName>
+                  <idno type="VIAF">https://viaf.org/viaf/286265178/</idno>
+                  <note> Jules César (latin : Caius Iulius Caesar IV à sa naissance, Imperator
+                     Iulius Caesar Divus après sa mort), aussi appelé simplement César, est un
+                     général, homme politique et écrivain romain, né à Rome le 12 ou le 13 juillet
+                     100 av. J.-C. et mort le 15 mars 44 av. J.-C. (aux ides de mars) dans la même
+                        ville.<ref target="https://fr.wikipedia.org/wiki/Jules_C%C3%A9sar">(Source
+                        Wikipedia)</ref></note>
+               </person>
+
+               <person xml:id="Caius_Marius">
+                  <persName>Caius Marius</persName>
+                  <idno type="VIAF">https://viaf.org/viaf/82988171/</idno>
+                  <note> Cc.157 - 86 a.C. De famille équestre, Caius Marius choisit pourtant de
+                     faire une carrière politique. Questeur vers 123, il accède à la préture en 115
+                     puis exerce un proconsulat en Espagne. En 109, il accompagne Metellus, en tant
+                     que légat, dans la guerre contre Jugurtha. Il réussit alors à se faire élire au
+                     consulat, remplace Metellus et termine la guerre de Numidie, ce qui lui vaut
+                     les honneurs du triomphe en 104. Il exerce encore le consulat à plusieurs
+                     reprises et réalise une profonde réforme militaire qui fait des légions une
+                     armée de professionnels. Marius participe à la Guerre sociale (cf. ci-dessus)
+                     et brigue un nouveau consulat pour 88 : c'est Sylla qui l'obtient. Rome entre
+                     alors dans une guerre civile où Marius, encore élu consul en 86, est finalement
+                        vaincu.<ref target="http://bcs.fltr.ucl.ac.be/SUET/CAES/1.htm">(Source
+                        BIBLIOTHECA CLASSICA SELECTA (BCS))</ref></note>
+               </person>
+
+               <person xml:id="Marcus_Thermus">
+                  <persName>Marcus Minucius Thermus</persName>
+                  <idno/>
+                  <note>Marcus Minucius Thermus était un ancien soldat et homme d'État romain . Il
+                     était préteur en 81 avant JC et propréteur de la province romaine d'Asie
+                     l'année suivante, succédant à Murena. La capture de Mytilène a eu lieu pendant
+                     son poste de gouverneur; Mytilène s'était révolté contre Rome et était
+                     soupçonné d'avoir aidé activement ou tacitement les soi-disant pirates de la
+                     région. Suetonius attribue à Thermus la victoire, mais le siège peut avoir été
+                     mené par ou en coordination avec Lucius Licinius Lucullus. On sait peu de
+                     choses sur sa vie ou sa carrière. Jules César a commencé son service militaire
+                     sous Thermus après son pardon par Sulla pendant les proscriptions de 82 av . Ce
+                     fut Thermus qui envoya le jeune César comme envoyé à la cour de Nicomède IV de
+                     Bithynie pour demander de l'aide sous la forme d'une flotte . Bien que Thermus
+                     fût un partisan de Sullan, en 86 av.J.-C., son jeune frère Quintus avait été
+                     légat en Asie sous la nomination du rival Marians . Quintus avait remplacé
+                     Fimbria après sa mutinerie.<ref
+                        target="https://en.wikipedia.org/wiki/Marcus_Minucius_Thermus">(Source
+                        Wikipedia)</ref></note>
+               </person>
+
+               <person xml:id="Nicomeden">
+                  <persName>Nicomède IV Philopator</persName>
+                  <idno/>
+                  <note>Nicomède IV Philopator, roi de Bithynie, est le petit-fils de Nicomède II
+                     Épiphane et le successeur, vers 95/94 av. J.-C., de Nicomède III Évergète. Il
+                     revient à l'alliance romaine, abandonnée par son prédécesseur, et voit ses
+                     États envahis à deux reprises par le roi du Pont, Mithridate VI, qui lui oppose
+                     son demi-frère réel ou supposé : Socratès Chrèstos (i.e. « l'Oint ») entre 92
+                     et 90 av. J.-C., puis l'un de ses propres fils. Une fois rétabli sur son trône,
+                     Nicomède IV, poussé par ses alliés romains, envahit le royaume du Pont qu'il
+                     pille jusqu'à la ville d'Amastris et où il s'empare d'un butin non négligeable.
+                     Bien que Mithridate VI ait été cette fois l'agressé, les légats sénatoriaux
+                     donnent raison au roi de Bithynie. En 89 av. J.-C., Nicomède IV, allié à
+                     Ariobarzane Ier de Cappadoce, envahit la Paphlagonie qui avait été partagée
+                     avec le royaume du Pont. Il s'agissait cette fois encore manifestement d'une
+                     provocation vis-à-vis de Mithridate VI. Ce dernier expulse une nouvelle fois de
+                     son royaume Ariobarzane Ier et rejette l'ultimatum qui lui interdisait de
+                     s'attaquer aux deux souverains alliés du Sénat (hiver 89/88 av. J.-C.). Au
+                     printemps 88 av. J.-C., Nicomède IV entre de nouveau en Paphlagonie mais son
+                     armée se fait écraser. Mithridate VI attaque à son tour la Bithynie qu'il
+                     occupe et bat les troupes romaines locales. Le légat Manius Aquilius s'enferme
+                     dans Pergame avant de se retirer à Mytilène. Le gouverneur d'Asie L. Cassius,
+                     qui devait défendre la Phrygie et la Galatie, se retire sur le haut-Méandre
+                     avant d'abandonner sa province et de se réfugier à Rhodes. Ces événements sont
+                     à l'origine de la première guerre de Mithridate. Nicomède IV s'enfuit à Rome,
+                     où il retrouve Ariobarzane Ier, et est rétabli une seconde fois par les Romains
+                     après la Paix de Dardanos en 85 av. J.-C.. À sa mort, en 74 av. J.-C., il cède
+                     son royaume à Rome par testament, prétexte utilisé par Mithridate VI pour
+                     intervenir une nouvelle fois, déclenchant ainsi la troisième guerre
+                        mithridatique.<ref target="https://fr.wikipedia.org/wiki/Nicom%C3%A8de_IV"
+                        >(Source Wikipedia)</ref></note>
+               </person>
+
+
+
+               <person xml:id="Serulius_Isauricus">
+                  <persName>Publius Servilius Vatia Isauricus </persName>
+                  <idno/>
+                  <note>Publius Servilius Vatia Isauricus (134/130 av. J.-C. à 44 av. J.-C.) est un
+                     homme politique de la fin de la République romaine. Il fut consul en 79 av.
+                     J.-C. durant la dictature de Sylla. B Neveu de Quintus Cecilius Metellus
+                     Macedonicus, il prit les armes en 100 av. J.-C.avec le reste du parti
+                     sénatorial contre Lucius Appuleius Saturninus. Sulla le fit élire consul en 79
+                     av. J.-C. ; l'année suivante il fut proconsul en Cilicie, avec l'ordre de
+                     combattre les pirates. Il réussit à les vaincre sur mer, les obligeant à
+                     abandonner les ports et à se réfugier dans les montagnes. S'ensuivirent trois
+                     ans d'une guerre très difficile pour les troupes romaines, obligées d'affronter
+                     un ennemi qui connaissait bien les montagnes où il combattait. Vatia,
+                     commandant énergique et résolu, prit très vite la ville d'Olympos en Lycie, au
+                     pied du mont homonyme, puis il mit le siège devant Phaselis, défendue par
+                     Zenicetus, celui-ci, se voyant incapable de la défendre mit le feu à la ville
+                     et se jeta dans les flammes avec ses compagnons. Ayant arraché aux rebelles
+                     toutes les villes côtières, il fit traverser les monts Taurus pour la première
+                     fois à l'armée romaine, et se dirigea vers l'intérieur, dans l'intention de
+                     prendre Isaura, la capitale des Isauriens. Il y réussit en faisant dévier le
+                     cours d'un fleuve et en prenant la ville par la soif. Pour sa conduite
+                     brillante, il fut acclamé imperator par les troupes et reçut le surnom
+                     d'Isauricus. Après avoir donné une administration à la nouvelle province, il
+                     retourna à Rome, où en 74 av. J.-C. il célébra son triomphe. Cependant la
+                     menace des pirates n'avait pas été complètement écartée, et elle renaquit bien
+                     vite. Servilius devint un des sénateurs les plus importants, et Cicéron le cite
+                     fréquemment dans ses écrits. Il fut un des juges lors du procès contre Verres
+                     (70 av. J.-C.) ; en 66 av. J.-C. il soutint la proposition de conférer à Cneius
+                     Pompeius Magnus le commandement de la guerre contre les pirates ; en 63 av.
+                     J.-C. il fut vaincu pour l'élection du Grand Pontife par un des hommes qui
+                     avaient servi sous ses ordres dans la Guerre contre les pirates, Jules César ;
+                     la même année il soutint Cicéron pour réprimer la Conjuration de Catilina, et
+                     demanda au Sénat d'infliger la peine de mort aux conjurés ; en 57 av. J.-C. il
+                     fut parmi ceux qui aidèrent Cicéron à revenir d'exil et en 55 av. J.-C. il fut
+                     élu censeur avec Marcus Valerius Messalla Niger. Il ne participa pas aux
+                     guerres civiles, sans doute en raison de son âge avancé. Il mourut en 44 av.
+                     J.-C., à l'âge d'environ 80 ans. <ref
+                        target="https://fr.wikipedia.org/wiki/Publius_Servilius_Vatia_Isauricus_(consul_en_-79)"
+                        >(Source Wikipedia)</ref></note>
+               </person>
+
+
+               <person xml:id="Marcus_Æmilius_Lepidus">
+                  <persName>Marcus Æmilius Lepidus</persName>
+                  <idno/>
+                  <note>Marcus Aemilius Lepidus (120-77 av. J.-C.) est un homme politique de la
+                     République romaine au début du Ier siècle av. J.-C., père du triumvir Marcus
+                     Aemilius Lepidus (consul en 46 av. J.-C.). Après avoir été édile en 86 av.
+                     J.-C., il s'enrichit lors des proscriptions de Sylla. Il est préteur en Sicile
+                     en 80 av. J.-C.. À l'issue de sa préture, il est poursuivi en justice par
+                     Quintus Caecilius Metellus Celer et Quintus Caecilius Metellus Nepos, deux
+                     frères, pour extorsion de fonds. Il est cependant acquitté. Lepidus est élu
+                     consul en juillet 79 av. J.-C., juste avant que Sylla quitte le pouvoir. En
+                     janvier 78 av. J.-C., il commence son mandat, l'année de la mort de Sylla. Il
+                     voulut rappeler les exilés de la précédente guerre civile, rendre aux paysans
+                     des terres confisquées et données aux vétérans de Sylla, et promulguer une loi
+                     frumentaire. Il se heurte au Sénat, qui n'accepte que la loi frumentaire et
+                     s'oppose aux autres mesures. En 77 av. J.-C., il prit le parti des insurgés qui
+                     tentent une révolte en Étrurie, où nombre de terres ont été confisquées par
+                     Sylla pour ses vétérans. Il réclame un second consulat et le rétablissement des
+                     prérogatives des tribuns de la plèbe abolies par Sylla. Le Sénat le proclame «
+                     ennemi public », et un senatus consultum ultimum permet au jeune Pompée de le
+                     poursuivre à la tête d'une armée de vétérans, héritage de son père. Lepidus est
+                     battu, pratiquement sans combats à cause de la défection de son principal
+                     lieutenant. Il se réfugie en Sardaigne, où il meurt peu après.<ref
+                        target="https://fr.wikipedia.org/wiki/Marcus_%C3%86milius_Lepidus_(consul_en_-78)"
+                        >(Source Wikipedia)</ref></note>
+               </person>
+
+               <person xml:id="Cnaeus_Cornelius_Dolabella">
+                  <persName>Cnaeus Cornelius Dolabella</persName>
+                  <idno/>
+                  <note> Cnaeus Cornelius Dolabella est un homme politique romain du Ier siècle av.
+                     J.-C. En 82 av. J.C., sous le commandement de Sylla, il participe aux batailles
+                     de Sacriport et de la porte Colline1. En 81 av. J.-C., il est élu consul avec
+                     Marcus Tullius Decula sous la dictature de Sylla, qui possédait tous les
+                     pouvoirs. Il est le vainqueur des Thraces en 78 av. J.-C. alors qu'il est
+                     proconsul en Macédoine entre 80 av. J.-C. et 78 av. J.-C. À son retour, accusé
+                     de concussion par le jeune Jules César, il fut défendu par les meilleurs
+                     orateurs, Gaius Aurelius Cotta (?) et Quintus Hortensius Hortalus, et fut
+                        acquitté.<ref
+                        target="https://fr.wikipedia.org/wiki/Cnaeus_Cornelius_Dolabella">(Source
+                        Wikipedia)</ref></note>
+               </person>
+
+               <person xml:id="Apollonius_Molon">
+                  <persName>Apollonius Molon</persName>
+                  <idno/>
+                  <note>Molon de Rhodes ou Apollonius Molon (Ἀπολλώνιος ὁ Μόλων) (fl. au début du
+                     Ier siècle av. J.-C.) est un rhéteur grec né à Alabanda. Il eut comme disciple
+                     Cicéron et César. Étant un asianiste modéré, il eut une influence importante
+                     sur Cicéron. Apollonius, envoyé à Rome en qualité d'ambassadeur l'an 82 av.
+                     J.-C., y obtint un grand succès Outre son enseignement oratoire, Apollonius
+                     Molon est connu par ses opinions philosophiques; il appartenait à la secte
+                     stoïcienne. Il paraît avoir soutenu des polémiques contre les Juifs, dont il a
+                     jugé sévèrement les mœurs et les opinions religieuses.<ref
+                        target="https://fr.wikipedia.org/wiki/Molon_de_Rhodes">(Source
+                        Wikipedia)</ref></note>
+               </person>
+
+               <person xml:id="Mithridate">
+                  <persName>Mithridate VI Eupator</persName>
+                  <idno type="VIAF">https://viaf.org/viaf/261471855/</idno>
+                  <note>Mithridate VI Eupator, plus connu sous le nom de Mithridate le Grand, en
+                     grec Μιθριδάτης Εὐπάτωρ, est un roi du Pont ; il doit probablement ce surnom
+                     d’Eupatôr (« de noble naissance », « bien-né ») à son oncle, le roi séleucide
+                     Antiochos V. Né en 135 ou en 132 av. J.-C., il se suicide en 63 av. J.-C. Il
+                     est le fils aîné du roi du Pont Mithridate V Évergète qui avait été l'allié de
+                     Rome lors de la troisième guerre punique. D’origine perse, il se présente comme
+                     un roi hellénisé. Personnage complexe, ambitieux, inflexible aussi, amateur
+                     d'art, Mithridate est souvent comparé à Hannibal pour sa haine de Rome et sa
+                     position de symbole des sentiments anti-romains. Il échoue cependant dans sa
+                     tentative de renverser la domination romaine en Asie et en Grèce. En effet, il
+                     est un des seuls rois à avoir tenu tête à la République romaine, et ce pendant
+                     plus de 25 ans, au cours des guerres mithridatiques (88-65 av. J.-C.). La
+                     supériorité militaire de Rome, la qualité des généraux romains comme Sylla,
+                     Lucullus ou Pompée, mais aussi l'épuisement des ressources en or, hommes et
+                     ravitaillement de son royaume ont eu raison de ses ambitions. Il est également
+                     connu pour être à l'origine du concept de mithridatisation, qui consiste à
+                     consommer régulièrement de faibles doses de poison pour y accoutumer
+                     l'organisme et y développer une résistance.<ref
+                        target="https://fr.wikipedia.org/wiki/Mithridate_VI">(Source
+                        Wikipedia)</ref></note>
+               </person>
+
+
+               <person xml:id="Quintus_Sertorius">
+                  <persName>Quintus Sertorius</persName>
+                  <idno type="VIAF">https://viaf.org/viaf/84037004/</idno>
+                  <note>D'origine équestre, il devient questeur en 91, puis préteur (en 85 ou 83).
+                     C'est un partisan de Marius et de Cinna qui, après sa préture, devient
+                     gouverneur d'Espagne. Il doit s'enfuir de sa province devant son remplaçant,
+                     envoyé par Sylla, mais y reprend pied en 80, rappelé par les Lusitaniens. Il
+                     fait de l'Espagne un foyer de résistance à Sylla puis au régime qui, à Rome,
+                     s'est mis en place après l'abdication du dictateur. Il reçoit l'appui des
+                     partisans de Lépide, s'allie à Mithridate, est vainqueur de Pompée en 77 mais
+                     son régime devient de plus en plus despotique et il finira par être assassiné
+                     en 73. Plutarque a composé une Vie de Sertorius.<ref
+                        target="http://bcs.fltr.ucl.ac.be/SUET/CAES/5.htm">(Source BIBLIOTHECA
+                        CLASSICA SELECTA (BCS))</ref>
+                  </note>
+               </person>
+
+               <person xml:id="Pompeia">
+                  <persName>Pompeia</persName>
+                  <idno/>
+                  <note>César l'épousa en 68 av. J.-C., après avoir exercé les fonctions de questeur
+                     en Hispanie, sa première femme Cornélia étant morte l'année précédente. César
+                     était le neveu de Caius Marius tandis que Cornélia était la fille de Lucius
+                     Cornelius Cinna. Or, Marius et Cinna, chefs des Populares, avaient été vaincus
+                     durant la première (-88 à -87) et la deuxième (-82 à -81) guerres civiles les
+                     opposant à Sylla. Le mariage de César avec une petite-fille de Sylla, qui avait
+                     pourtant proscrit celui-ci dans sa jeunesse, marque peut-être sa volonté
+                     d'accepter la nouvelle situation politique romaine. En 63 av. J.-C., César fut
+                     élu pontifex maximus, c'est-à-dire grand-prêtre de la religion romaine, ce qui
+                     lui donnait droit de résider dans la Regia, résidence officielle sur la Via
+                     Sacra. Dans cette maison Pompeia accueillit le festival de la Bona Dea (« la
+                     bonne déesse »), auquel aucun homme n'avait le droit d'assister. Pourtant un
+                     jeune patricien, Clodius Pulcher, réussit à s'y introduire, déguisé en joueuse
+                     de lyre, apparemment dans le but de séduire Pompeia. Il fut démasqué et
+                     poursuivi pour profanation. César ne put apporter aucune preuve contre Clodius
+                     lors de son procès, et le galant fut acquitté. César n'en divorça pas moins
+                     d'avec Pompeia, disant : « Ma femme n'a même pas le droit d'être soupçonnée ».
+                     Cette citation de César est restée célèbre sous la forme suivante : « La femme
+                     de César ne doit pas être soupçonnée ».<ref
+                        target="https://fr.wikipedia.org/wiki/Pompeia_Sulla">(Source
+                        Wikipedia)</ref></note>
+               </person>
+
+               <person xml:id="Quintus_Pompeius">
+                  <persName>Quintus Pompeius Rufus</persName>
+                  <idno/>
+                  <note>Quintus Pompeius Rufus († en -88) était un homme politique vers la fin de la
+                     République romaine. Il était le cousin éloigné de Cnaeus Pompeius Strabo et le
+                     fils ou petit-fils de Quintus Pompeius, consul en -141. Comme tribun de la
+                     plèbe en -100 ou en -99, Rufus essaya vainement de faire revenir d'exil Quintus
+                     Caecilius Metellus Numidicus. En -91, il fut préteur urbain. En même temps que
+                     Lucius Cornelius Sylla, beau-père de son fils qui portait le même nom que lui,
+                     il devint consul en -88. Il combattit le tribun de la plèbe Publius Sulpicius
+                     Rufus qui voulait répartir dans toutes les tribus les nouveaux citoyens
+                     italiens et donner à Caius Marius le commandement contre Mithridate. À la suite
+                     des troubles provoqués par cette affaire (Sylla et Pompeius Rufus avaient tenté
+                     de bloquer toute activité politique pour gaggner du temps contre ces mesures),
+                     des partisans de Sulpicius tuèrent Pompeius Rufus le jeune. Après la marche de
+                     Sylla sur Rome, Pompeius Rufus le soutint dans ses mesures contre ses
+                     adversaires politiques (Marius, entre autres) et reçut le commandement exercé
+                     jusque-là par le proconsul Cnaeus Pompeius Strabo. Ses soldats l'assassinèrent
+                     (peut-être à l'instigation de Cnaeus Pompeius Strabo) alors qu'il n'avait pas
+                     encore terminé son année administrative comme consul.<ref
+                        target="https://fr.wikipedia.org/wiki/Quintus_Pompeius_Rufus">(Source
+                        Wikipedia)</ref></note>
+               </person>
+
+               <person xml:id="Ancus_Marcius">
+                  <persName>Ancus Marcius"</persName>
+                  <idno type="VIAF">https://viaf.org/viaf/89555590/</idno>
+                  <note>Ancus Marcius est le quatrième des sept rois légendaires de la Rome antique.
+                     Il règne de -640 à -616 (dates approximatives). Comme ses prédécesseurs, après
+                     un bref interrègne, Ancus est élu (en 640 av. J.-C.) par le peuple romain, une
+                     élection ratifiée par le Sénat. Son règne nous est présenté principalement par
+                     les historiens Tite-Live et Denys d'Halicarnasse.<ref
+                        target="https://fr.wikipedia.org/wiki/Ancus_Marcius">(Source
+                        Wikipedia)</ref></note>
+               </person>
+
+               <person xml:id="Julia_Caesaris_tante">
+                  <persName>Julia Caesaris</persName>
+                  <idno/>
+                  <note>Publius Julia Caesaris (v. 130 av. J.-C. - 69 av. J.-C.) est la fille de
+                     Caius Julius Caesar II (le grand-père du dictateur Caius Julius Caesar IV, dit
+                     Jules César ; Julia est donc sa tante) et de Marcia, fille de Quintus Marcius
+                     Rex, préteur. Elle était la sœur de Caius Julius Caesar III, père de Jules
+                     César, et de Sextus Julius Caesar III, consul en 91 av. J.-C. Vers 112 ou 110
+                     av. J.-C. elle épousa le consul Caius Marius et lui donne un fils Caius Marius,
+                     consul en 82 av. J.-C. Selon Plutarque, elle est la cause de l'ambition de
+                     Marius et de son ascension politique : patricienne, alors qu'il n'était
+                     lui-même que plébéien, elle l'aurait ainsi incité à développer sa carrière et à
+                     viser les plus hauts honneurs afin de donner du prestige à son nom. Toujours
+                     selon Plutarque, Julia Caesaris était une femme vertueuse, dévouée à sa
+                     famille, tant et si bien que sa réputation et sa dignité canonique lui
+                     permirent d'échapper aux proscriptions mises en place par Sylla contre Marius,
+                     son mari, et ses alliés. Elle meurt en 69 av. J.-C. ; son éloge funèbre est
+                     prononcé par Jules César en personne.<ref
+                        target="https://fr.wikipedia.org/wiki/Julia_Caesaris_(femme_de_Marius)"
+                        >(Source Wikipedia)</ref></note>
+               </person>
+
+
+               <person xml:id="Publius_Clodius">
+                  <persName>Publius Clodius Pulcher</persName>
+                  <idno type="VIAF">https://viaf.org/viaf/89741484/</idno>
+                  <note>Publius Clodius Pulcher (né en 93 ou 92 av. J.-C., assassiné le 18 janvier
+                     52 av. J.-C.) est un homme politique romain du courant des populares, démagogue
+                     soutenu à ses débuts par Jules César, il instaure des distributions gratuites
+                     de blé aux citoyens pauvres. Ennemi acharné de Cicéron, il fait monter le
+                     désordre politique à Rome vers une violence permanente. Il est tué lors d'une
+                     échauffourée avec son adversaire, Titus Annius Milon.<ref
+                        target="https://fr.wikipedia.org/wiki/Publius_Clodius_Pulcher">(Source
+                        Wikipedia)</ref></note>
+               </person>
+               <!-- très bien -->
+               <listRelation type="marital">
+                  <relation name="epoux" active="#Caesar"
+                     passive="#Cossutia #Cornelia_Cinna #Pompeia"/>
+                  <relation name="epoux" active="#Quintus_Pompeius_Rufus"
+                     passive="#Cornelia_Sulla #Pompeia"/>
+                  <relation name="epoux" active="#Mamercus_Aemilius_Lepidus_Livianus"
+                     passive="#Cornelia_Sulla"/>
+               </listRelation>
+
+               <listRelation type="parent">
+                  <relation name="pere" active="#Caius_Marius" passive="Julia_Caesaris_tante"/>
+                  <relation name="pere" active="#Lucius_Cornelius_Cinna_consul_87"
+                     passive="#Lucius_Cornelius_Cinna_fils #Cornelia_Cinna"/>
+                  <relation name="pere" active="#Caesar" passive="Julia_Caesaris_fille"/>
+                  <relation name="pere" active="#Lucius_Cornelius_Sulla" passive="Cornelia_Sulla"/>
+                  <relation name="mere" active="#Cornelia_Sulla" passive="#Pompeia"/>
+                  <relation name="tante" active="#Julia_Caesaris_tante" passive="#Caesar"/>
+               </listRelation>
+            </listPerson>
+
+         </particDesc>
+
+         <langUsage>
+            <language ident="lat">Latin</language>
+         </langUsage>
+      </profileDesc>
+      <encodingDesc>
+         <variantEncoding method="parallel-segmentation" location="internal"/>
+      </encodingDesc>
+   </teiHeader>
+   <text>
+      <body>
+         <div type="book" n="1">
+            <head>LIBER I</head>
+            <head>DIVVS IVLIVS</head>
+
+            <div type="chapter" n="1">
+
+               <p n="1">
+                  <app>
+                     <!-- apparat positif-->
+                     <lem wit="#M #V #δ">Annum agens</lem>
+                     <rdg wit="#L" type="substantive">Iullius Caesar annum agens</rdg>
+                     <rdg wit="#G" type="substantive">Gaius Iullius Caesar annum agens</rdg>
+
+                     <!-- cett.=> ceteri / other manuscripts -->
+                     <rdg wit="#V #O #S #T #Π #Q #ε #R #ρ #dett.">Annum agens Caesar</rdg>
+                     <!-- **** = mot indéchiffrable = lacuna -->
+                     <rdg wit="#P" type="lacuna">Anunum agens ****</rdg>
+                  </app> sextum decimum patrem amisit; sequentibusque consulibus flamen Dialis
+                  destinatus dimissa <persName ref="#Cossutia">Cossutia</persName>, quae familia
+                  equestri sed admodum diues praetextato desponsata fuerat, <persName
+                     ref="#Cornelia_Sulla">Corneliam </persName>
+                  <persName ref="#Lucius_Cornelius_Cinna_consul_87">Cinnae</persName> quater
+                  consulis filiam duxit uxorem, ex qua illi mox <persName
+                     ref="#Julia_Caesaris_fille">Iulia</persName> nata est; neque ut repudiaret
+                  compelli a dictatore <persName ref="#Lucius_Cornelius_Cinna_consul_87"
+                     >Sulla</persName> ullo modo potuit. </p>
+               <p n="2">Quare et sacerdotio et uxoris dote et gentilicis hereditatibus multatus
+                  diuersarum partium habebatur, ut etiam <app>
+                     <!-- apparat négatif-->
+                     <lem>discedere</lem>
+                     <rdg wit="#M1" type="substantive">discere</rdg>
+                     <rdg wit="#G #P #O #S #T" type="substantive"> discederet</rdg>
+                  </app> e medio et quamquam morbo quartanae adgrauante prope per singulas noctes
+                  commutare latebras cogeretur seque ab inquisitoribus pecunia redimeret, donec per
+                  uirgines Vestales perque <persName ref="#Mamercus_Æmilius_Lepidus_Livianus"
+                     >Mamercum Aemilium</persName> et <persName ref="#Aurelius_Cotta">Aurelium
+                     Cottam</persName> propinquos et adfines suos ueniam <app>
+                     <!-- apparat négatif-->
+                     <lem>impetrauit</lem>
+                     <rdg wit="#V" type="substantive">impetraurit</rdg>
+                     <rdg wit="#L1 #P #O #S #T" type="substantive">perpetrauit</rdg>
+                  </app>.</p>
+               <p n="3">Satis constat <persName ref="#Lucius_Cornelius_Sulla">Sullam</persName>, cum
+                  deprecantibus amicissimis et ornatissimis uiris aliquamdiu denegasset atque illi
+                  pertinaciter contenderent, expugnatum tandem proclamasse siue diuinitus siue
+                  aliqua coniectura: <app>
+                     <!-- apparat négatif-->
+                     <lem>uincerent</lem>
+                     <rdg wit="#M2" type="substantive">ulcerint</rdg>
+                  </app> ac sibi haberent, dum modo scirent eum, quem incolumem tanto opere
+                  cuperent, quandoque optimatium partibus, quas secum simul defendissent, exitio
+                  futurum; nam <persName ref="#Caesar">Caesari</persName> multos <persName
+                     ref="#Caius_Marius">Marios</persName> inesse.</p>
+            </div>
+
+
+            <div type="chapter" n="2">
+               <p n="1">Stipendia prima in Asia fecit <persName ref="#Marcus_Thermus">Marci
+                     Thermi</persName> praetoris contubernio; a quo ad <app>
+                     <!-- apparat positif-->
+                     <!-- codd. = codices  -->
+                     <lem wit="#M1 #G #V #L #P #O #S #T #Π #Q #ε #R #ρ #dett.">accersendam</lem>
+                     <rdg wit="#M2" type="orthographic">arcessendam</rdg>
+                  </app> classem in <placeName ref="#Izmit">Bithyniam</placeName> missus desedit
+                  apud <persName ref="#Nicomeden">Nicomeden</persName>, non sine rumore <app>
+                     <!-- apparat négatif-->
+                     <lem>prostratae</lem>
+                     <rdg wit="#M1 #V1" type="substantive">prostatae<note>[ae per
+                        compend.]</note></rdg>
+                  </app> regi pudicitiae; quem rumorem auxit intra paucos rursus dies repetita
+                  Bithynia per causam exigendae pecuniae, quae deberetur cuidam libertino clienti
+                  suo.</p>
+               <p n="2">Reliqua militia secundiore fama fuit et a <persName ref="#Marcus_Thermus"
+                     >Thermo</persName> in expugnatione <placeName ref="#Mytilene"
+                     >Mytilenarum</placeName> corona ciuica donatus est.</p>
+            </div>
+
+            <div type="chapter" n="3">
+               <p n="1">
+                  <!--est. | : accronyme non compris et non retranscrits-->
+                  <app>
+                     <!-- apparat négatif-->
+                     <lem>Meruit</lem>
+                     <rdg wit="#M2 #δ" type="substantive">emeruit</rdg>
+                  </app> et sub <persName ref="#Serulius_Isauricus">Seruilio Isaurico</persName> in
+                     <placeName ref="#Adana">Cilicia</placeName>, sed breui tempore.</p>
+
+               <p n="2">Nam <persName ref="#Lucius_Cornelius_Sulla">Sullae</persName> morte
+                  comperta, simul spe nouae dissensionis, quae per <persName
+                     ref="#Marcus_Æmilius_Lepidus">Marcum Lepidum</persName> mouebatur, <placeName
+                     ref="#Rome">Romam</placeName> propere <app>
+                     <!-- apparat négatif-->
+                     <lem>redit</lem>
+                     <!-- "[]" = interpolation - renvoyés dans une balise note-->
+                     <rdg wit="#T #dett.">rediit<note>[uulgo]</note></rdg>
+                  </app> et <persName ref="#Marcus_Æmilius_Lepidus">Lepidi</persName> quidem
+                  societate, quamquam magnis condicionibus inuitaretur, abstinuit, <app>
+                     <!-- apparat négatif-->
+                     <lem>cum</lem>
+                     <!-- "ST, ΠQR" => "," interprété comme n'ayant pas d'impact sur la variation du lemme - utilisé selon moi uniquement pour le regroupement visuel des manuscrits
+                     hypothèse qui semble vérifier à partir de cette édition (table des sigles: voir Y et Y' incluant #Π #Q #ε #R  et apparat critique avec Y' pour cas triumphalem) : 
+                     https://books.google.fr/books?id=XugYJoRSZlIC&lpg=PA48-IA2&dq=%22triumphalem%20uirum%22&hl=fr&pg=PA41#v=onepage&q&f=false
+                     -->
+                     <rdg wit="#S #T #Π #Q #R">tum</rdg>
+                  </app> ingenio eius diffisus tum <app>
+                     <lem>occasione</lem>
+                     <!-- "[]" = interpolation - renvoyé dans une balise note-->
+                     <rdg wit="#Casaubon" type="substantive">occasioni <note>[uulgo]</note></rdg>
+                     <!-- Ici la valeur du type ne semble pas adéquate -->
+                  </app>, quam minorem opinione offenderat.</p>
+            </div>
+
+            <div type="chapter" n="4">
+               <p n="1">Ceterum composita seditione ciuili <persName
+                     ref="#Cnaeus_Cornelius_Dolabella">Cornelium Dolabellam</persName> consularem et <app>
+                     <!-- apparat négatif-->
+                     <lem>triumphalem</lem>
+                     <!-- "," interprété comme n'ayant pas d'impact sur la variation du lemme - utilisé uniquemnt pour le regroupement visuel des manuscrits-->
+                     <rdg wit="#P2 #O2 #S #T #Π #Q #ε #R ">triumphalem uirum</rdg>
+                     <!-- Un type addition aurait pu ête bien ici -->
+                  </app> repetundarum postulauit; absolutoque <placeName ref="#Rhodes"
+                     >Rhodum</placeName> secedere statuit, et ad declinandam inuidiam et ut per
+                  otium ac requiem <persName ref="#Apollonius_Molon">Apollonio <app>
+                        <!-- apparat négatif-->
+                        <lem>Moloni</lem>
+                        <rdg wit="#G #Π #Q" type="orthographic">Miloni</rdg>
+                     </app>
+                  </persName> clarissimo tunc dicendi magistro operam daret. </p>
+               <p n="2"> Huc dum hibernis iam mensibus traicit, circa <placeName ref="#Farmakonisi">
+                     <app>
+                        <!-- apparat négatif-->
+                        <lem>Pharmacussam</lem>
+                        <rdg wit="#G" type="orthographic">Pharmacausam</rdg>
+                        <rdg wit="#V" type="orthographic">pharnacusam</rdg>
+                        <rdg wit="#L #P #O #S #T" type="orthographic">pharmacusam</rdg>
+
+                     </app> insulam</placeName> a praedonibus captus est mansitque apud eos non sine
+                  summa <app>
+                     <!-- apparat négatif-->
+                     <lem>indignatione</lem>
+                     <rdg wit="#Scriverius" type="substantive">in dignatione</rdg>
+                     <rdg wit="#Orsini" type="substantive">dignationes</rdg>
+                  </app> prope quadraginta dies cum uno medico et cubicularis duobus. nam comites
+                  seruosque <app>
+                     <!-- apparat négatif-->
+                     <lem>ceteros</lem>
+                     <rdg wit="#Q #ε #T #Π"/>
+                     <!-- Un type omission aurait été bien ici -->
+
+                  </app> initio statim ad expediendas pecunias, quibus redimeretur, dimiserat. </p>
+               <p n="3"> Numeratis deinde quinquaginta talentis expositus in litore non distulit
+                  quin e uestigio classe deducta persequeretur abeuntis ac redactos in potestatem
+                  supplicio, quod saepe illis minatus inter iocum fuerat, adficeret.</p>
+
+               <p n="4"> Vastante regiones proximas <persName ref="#Mithridate"
+                     >Mithridate</persName>, ne <app>
+                     <!-- apparat négatif-->
+                     <lem>desidere</lem>
+                     <!-- "," interprété comme n'ayant pas d'impact sur la variation du lemme - utilisé uniquemnt pour le regroupement visuel des manuscrits-->
+                     <rdg wit="#V #L #P #O #S #T" type="substantive">dissidere</rdg>
+                  </app> in discrimine sociorum uideretur, ab <placeName ref="#Rhodes"
+                     >Rhodo</placeName>, quo pertenderat, transiit in Asiam auxiliisque contractis
+                  et praefecto regis prouincia expulso nutantis ac dubias ciuitates retinuit in
+                  fide.</p>
+            </div>
+
+            <div type="chapter" n="5">
+               <p n="1">
+                  <app>
+                     <!-- apparat négatif-->
+                     <lem>Tribunatu</lem>
+                     <!-- "," interprété comme n'ayant pas d'impact sur la variation du lemme - utilisé uniquemnt pour le regroupement visuel des manuscrits-->
+                     <rdg wit="#Q #ε #T #P #O #T" type="substantive">Tribunatum <note>[m in O puncio
+                           notata]</note></rdg>
+                     <rdg wit="#dett. #Torrentius">Tribunatus</rdg>
+                  </app> militum, qui primus <placeName ref="#Rome">Romam</placeName> reuerso per
+                  suffragia populi honor optigit, <app>
+                     <!-- apparat négatif-->
+                     <lem>actores</lem>
+                     <rdg wit="#Π #Q #ε #R" type="substantive">auctoresque</rdg>
+                     <rdg wit="#dett." type="substantive">auctores</rdg>
+                     <rdg wit="#Graevius" type="substantive">actores auctoresque</rdg>
+                  </app> restituendae tribuniciae potestatis, cuius uim <persName
+                     ref="#Lucius_Cornelius_Sulla">Sulla </persName>
+                  <app>
+                     <!-- apparat négatif-->
+                     <lem>diminuerat</lem>
+                     <rdg wit="#G #V #S #Π #Remacle" type="substantive">deminuerat</rdg>
+                     <!-- C'est aussi possiblement une variante graphique -->
+                  </app>, enixissime iuuit.</p>
+               <p n="2"><persName ref="#Lucius_Cornelius_Cinna_fils">L. etiam Cinnae</persName>
+                  uxoris fratri, et qui cum eo ciuili discordia <persName
+                     ref="#Marcus_Æmilius_Lepidus">Lepidum</persName> secuti post necem consulis ad
+                     <persName ref="#Quintus_Sertorius">Sertorium</persName> confugerant, reditum in
+                  ciuitatem rogatione Plotia confecit habuitque et ipse super ea re contionem.</p>
+            </div>
+
+            <div type="chapter" n="6">
+               <p n="1">Quaestor <persName ref="#Julia_Caesaris_tante">Iuliam</persName> amitam
+                  uxoremque <persName ref="#Cornelia_Sulla">Corneliam</persName> defunctas laudauit
+                  e more pro rostris.</p>
+               <p n="2">
+                  <app>
+                     <lem wit="#Casaubon">Et</lem>
+                     <!-- codd. = codices -->
+                     <rdg wit="#Codices" type="substantive">sed</rdg>
+
+                  </app> in amitae quidem laudatione de eius ac patris sui <app>
+                     <!-- apparat négatif -->
+                     <lem>utraque origine</lem>
+                     <rdg wit="#L #P #O #S #T" type="substantive">origine utraque</rdg>
+                  </app> sic refert: 'Amitae meae <persName ref="#Julia_Caesaris_tante"
+                     >Iuliae</persName> maternum genus ab regibus ortum, paternum cum diis
+                  inmortalibus coniunctum est. nam <app>
+                     <!-- apparat négatif -->
+                     <lem>ab </lem>
+                     <rdg wit="#P #O #P #S ,#N">a</rdg>
+                     <!-- [] = interpolation -->
+                     <rdg wit="#L" type="lacuna">a*<note>[a* in L]</note></rdg>
+                  </app>
+                  <persName ref="#Ancus_Marcius">Anco Marcio</persName> sunt Marcii Reges, quo
+                  nomine fuit mater; a <persName ref="#Julia_Caesaris_tante">Venere
+                  Iulii</persName>, <app>
+                     <!-- apparat négatif -->
+                     <lem>cuius</lem>
+                     <rdg wit="#M1" type="substantive">cuis</rdg>
+                     <!-- [] = interpolation -->
+                     <rdg wit="#M2" type="substantive">cuius<note>[in textu sed + cuius in
+                           marg.]</note></rdg>
+
+                  </app> gentis familia est nostra. est ergo in genere et sanctitas regum, qui
+                  plurimum inter homines pollent, et caerimonia deorum, quorum ipsi in potestate
+                  sunt reges.'</p>
+               <p n="3">In <persName ref="#Cornelia_Sulla">Corneliae</persName> autem locum
+                     <persName ref="#Pompeia">Pompeiam</persName> duxit <persName
+                     ref="#Quintus_Pompeius">Quinti Pompei</persName> filiam, <persName
+                     ref="#Lucius_Cornelius_Sulla">L. Sullae</persName> neptem; cum qua deinde
+                  diuortium fecit adulteratam opinatus a <persName ref="#Publius_Clodius">Publio
+                     Clodio</persName>, quem inter publicas caerimonias penetrasse ad <app>
+                     <!-- apparat négatif -->
+                     <lem>eam</lem>
+                     <rdg wit="#T" type="substantive">ea</rdg>
+                     <!-- [] = interpolation -->
+                     <!-- pourquoi substantive ici ? erreur sur la déclinaison ? -->
+                     <rdg wit="#P #O" type="substantive">eam<note>[Oudendorp]</note></rdg>
+                  </app> muliebri ueste tam constans fama erat, ut senatus quaestionem de pollutis
+                  sacris decreuerit.</p>
+            </div>
+         </div>
+      </body>
+   </text>
+</TEI>

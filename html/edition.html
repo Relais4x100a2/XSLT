@@ -1,0 +1,681 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <meta name="description" content="Edition encodée par Guillaume CAYEUX, d'après SUETONE, Vie des douze Césars. Tome I :&#xA;               César - Auguste, éd. et trad. Henri Ailloud, Paris, France, Les Belles Lettres, 1981,&#xA;               L + 305 p. ">
+      <meta name="keywords" content="Suetone, Vie des douze Césars, TEI, XSLT">
+      <meta name="author" content="Guillaume Cayeux">
+      <style>
+            /* Paramètrage CSS spécifique pour la balise tooltip */
+            .mytooltip {
+                position: relative;
+                display: inline-block;
+                color: red;
+            }
+            
+            /* Tooltip text */
+            .mytooltip .mytooltiptext {
+                visibility: hidden;
+                width: 400px;
+                top: 100%;
+                left: 60%;
+                margin-left: -240px;
+                background-color: #FFDADA;
+                text-align: left;
+                border-radius: 0% 0% 10% 10%;
+                position: absolute;
+                placement: bottom;
+                z-index: 1;
+                color: black;
+            }
+            
+            .mytooltip:hover .mytooltiptext {
+                visibility: visible;
+            }</style><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+      <title>Éditions numériques</title>
+   </head>
+   <body>
+      <nav class="navbar navbar-expand-md navbar-light justify-content-between" style="background-color: #FFDADA;"><a class="navbar-brand" style="padding-left: 30px" href="home.html">Vita Divi Iuli - Vie des douze Césars de Suétone</a><ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="edition.html">Éditions numériques</a></li>
+            <li class="nav-item"><a class="nav-link" href="index_pers.html">Personnages</a></li>
+            <li class="nav-item"><a class="nav-link" href="index_lieux.html">Lieux</a></li>
+            <li class="nav-item"><a class="nav-link" href="index_temoins.html">Témoins</a></li>
+            <li class="nav-item"><a class="nav-link" href="sources/suetone_G-Cayeux_M2_TNAH.xml" target="_blank">Encodage TEI</a></li>
+            <li class="nav-item"><a class="nav-link" href="sources/suetone_G-Cayeux_M2_TNAH_ODD.html" target="_blank">ODD au format HTML</a></li>
+         </ul>
+      </nav>
+      <h1 style="text-align: center" class="mt-4">Éditions numériques</h1><img src="./img/cesar.jpg" class="rounded mx-auto d-block" alt="Jules César" width="200" height="234"><div class="container p-4">
+         <div class="row">
+            <div class="col-md-6">
+               <h2 style="text-align: center" class="mt-4">Édition enrichie</h2>
+               <h3 style="text-align:center" class="mt-4">LIBER I - DIVVS IVLIVS</h3>
+               <h4 style="text-align:center" class="mt-4 mb-4"> Chapitre [1]</h4>
+               <p style="line-height: 2; text-align: justify"> [1] - Annum agens sextum decimum patrem amisit; sequentibusque consulibus flamen Dialis
+                  destinatus dimissa <a href="index_pers.html#Cossutia" id="Cossutia" class="perso" target="_blank">Cossutia</a>, quae familia
+                  equestri sed admodum diues praetextato desponsata fuerat, <a href="index_pers.html#Cornelia_Sulla" id="Cornelia_Sulla" class="perso" target="_blank">Corneliam </a><a href="index_pers.html#Lucius_Cornelius_Cinna_consul_87" id="Lucius_Cornelius_Cinna_consul_87" class="perso" target="_blank">Cinnae</a> quater
+                  consulis filiam duxit uxorem, ex qua illi mox <a href="index_pers.html#Julia_Caesaris_fille" id="Julia_Caesaris_fille" class="perso" target="_blank">Iulia</a> nata est; neque ut repudiaret
+                  compelli a dictatore <a href="index_pers.html#Lucius_Cornelius_Cinna_consul_87" id="Lucius_Cornelius_Cinna_consul_87" class="perso" target="_blank">Sulla</a> ullo modo potuit. <br> [2] - Quare et sacerdotio et uxoris dote et gentilicis hereditatibus multatus
+                  diuersarum partium habebatur, ut etiam discedere e medio et quamquam morbo quartanae adgrauante prope per singulas noctes
+                  commutare latebras cogeretur seque ab inquisitoribus pecunia redimeret, donec per
+                  uirgines Vestales perque <a href="index_pers.html#Mamercus_%C3%86milius_Lepidus_Livianus" id="Mamercus_Æmilius_Lepidus_Livianus" class="perso" target="_blank">Mamercum Aemilium</a> et <a href="index_pers.html#Aurelius_Cotta" id="Aurelius_Cotta" class="perso" target="_blank">Aurelium
+                     Cottam</a> propinquos et adfines suos ueniam impetrauit.<br> [3] - Satis constat <a href="index_pers.html#Lucius_Cornelius_Sulla" id="Lucius_Cornelius_Sulla" class="perso" target="_blank">Sullam</a>, cum
+                  deprecantibus amicissimis et ornatissimis uiris aliquamdiu denegasset atque illi
+                  pertinaciter contenderent, expugnatum tandem proclamasse siue diuinitus siue
+                  aliqua coniectura: uincerent ac sibi haberent, dum modo scirent eum, quem incolumem tanto opere
+                  cuperent, quandoque optimatium partibus, quas secum simul defendissent, exitio
+                  futurum; nam <a href="index_pers.html#Caesar" id="Caesar" class="perso" target="_blank">Caesari</a> multos <a href="index_pers.html#Caius_Marius" id="Caius_Marius" class="perso" target="_blank">Marios</a> inesse.<br></p>
+               <h4 style="text-align:center" class="mt-4 mb-4"> Chapitre [2]</h4>
+               <p style="line-height: 2; text-align: justify"> [1] - Stipendia prima in Asia fecit <a href="index_pers.html#Marcus_Thermus" id="Marcus_Thermus" class="perso" target="_blank">Marci
+                     Thermi</a> praetoris contubernio; a quo ad accersendam classem in <a href="index_lieux.html#Izmit" id="Izmit" class="lieux" target="_blank">Bithyniam</a> missus desedit
+                  apud <a href="index_pers.html#Nicomeden" id="Nicomeden" class="perso" target="_blank">Nicomeden</a>, non sine rumore prostratae regi pudicitiae; quem rumorem auxit intra paucos rursus dies repetita
+                  Bithynia per causam exigendae pecuniae, quae deberetur cuidam libertino clienti
+                  suo.<br> [2] - Reliqua militia secundiore fama fuit et a <a href="index_pers.html#Marcus_Thermus" id="Marcus_Thermus" class="perso" target="_blank">Thermo</a> in expugnatione <a href="index_lieux.html#Mytilene" id="Mytilene" class="lieux" target="_blank">Mytilenarum</a> corona ciuica donatus est.<br></p>
+               <h4 style="text-align:center" class="mt-4 mb-4"> Chapitre [3]</h4>
+               <p style="line-height: 2; text-align: justify"> [1] - Meruit et sub <a href="index_pers.html#Serulius_Isauricus" id="Serulius_Isauricus" class="perso" target="_blank">Seruilio Isaurico</a> in
+                  <a href="index_lieux.html#Adana" id="Adana" class="lieux" target="_blank">Cilicia</a>, sed breui tempore.<br> [2] - Nam <a href="index_pers.html#Lucius_Cornelius_Sulla" id="Lucius_Cornelius_Sulla" class="perso" target="_blank">Sullae</a> morte
+                  comperta, simul spe nouae dissensionis, quae per <a href="index_pers.html#Marcus_%C3%86milius_Lepidus" id="Marcus_Æmilius_Lepidus" class="perso" target="_blank">Marcum Lepidum</a> mouebatur, <a href="index_lieux.html#Rome" id="Rome" class="lieux" target="_blank">Romam</a> propere redit et <a href="index_pers.html#Marcus_%C3%86milius_Lepidus" id="Marcus_Æmilius_Lepidus" class="perso" target="_blank">Lepidi</a> quidem
+                  societate, quamquam magnis condicionibus inuitaretur, abstinuit, cum ingenio eius diffisus tum occasione, quam minorem opinione offenderat.<br></p>
+               <h4 style="text-align:center" class="mt-4 mb-4"> Chapitre [4]</h4>
+               <p style="line-height: 2; text-align: justify"> [1] - Ceterum composita seditione ciuili <a href="index_pers.html#Cnaeus_Cornelius_Dolabella" id="Cnaeus_Cornelius_Dolabella" class="perso" target="_blank">Cornelium Dolabellam</a> consularem et triumphalem repetundarum postulauit; absolutoque <a href="index_lieux.html#Rhodes" id="Rhodes" class="lieux" target="_blank">Rhodum</a> secedere statuit, et ad declinandam inuidiam et ut per
+                  otium ac requiem <a href="index_pers.html#Apollonius_Molon" id="Apollonius_Molon" class="perso" target="_blank">Apollonio Moloni</a> clarissimo tunc dicendi magistro operam daret. <br> [2] -  Huc dum hibernis iam mensibus traicit, circa <a href="index_lieux.html#Farmakonisi" id="Farmakonisi" class="lieux" target="_blank">Pharmacussam insulam</a> a praedonibus captus est mansitque apud eos non sine
+                  summa indignatione prope quadraginta dies cum uno medico et cubicularis duobus. nam comites
+                  seruosque ceteros initio statim ad expediendas pecunias, quibus redimeretur, dimiserat. <br> [3] -  Numeratis deinde quinquaginta talentis expositus in litore non distulit
+                  quin e uestigio classe deducta persequeretur abeuntis ac redactos in potestatem
+                  supplicio, quod saepe illis minatus inter iocum fuerat, adficeret.<br> [4] -  Vastante regiones proximas <a href="index_pers.html#Mithridate" id="Mithridate" class="perso" target="_blank">Mithridate</a>, ne desidere in discrimine sociorum uideretur, ab <a href="index_lieux.html#Rhodes" id="Rhodes" class="lieux" target="_blank">Rhodo</a>, quo pertenderat, transiit in Asiam auxiliisque contractis
+                  et praefecto regis prouincia expulso nutantis ac dubias ciuitates retinuit in
+                  fide.<br></p>
+               <h4 style="text-align:center" class="mt-4 mb-4"> Chapitre [5]</h4>
+               <p style="line-height: 2; text-align: justify"> [1] - Tribunatu militum, qui primus <a href="index_lieux.html#Rome" id="Rome" class="lieux" target="_blank">Romam</a> reuerso per
+                  suffragia populi honor optigit, actores restituendae tribuniciae potestatis, cuius uim <a href="index_pers.html#Lucius_Cornelius_Sulla" id="Lucius_Cornelius_Sulla" class="perso" target="_blank">Sulla </a>diminuerat, enixissime iuuit.<br> [2] - <a href="index_pers.html#Lucius_Cornelius_Cinna_fils" id="Lucius_Cornelius_Cinna_fils" class="perso" target="_blank">L. etiam Cinnae</a>
+                  uxoris fratri, et qui cum eo ciuili discordia <a href="index_pers.html#Marcus_%C3%86milius_Lepidus" id="Marcus_Æmilius_Lepidus" class="perso" target="_blank">Lepidum</a> secuti post necem consulis ad
+                  <a href="index_pers.html#Quintus_Sertorius" id="Quintus_Sertorius" class="perso" target="_blank">Sertorium</a> confugerant, reditum in
+                  ciuitatem rogatione Plotia confecit habuitque et ipse super ea re contionem.<br></p>
+               <h4 style="text-align:center" class="mt-4 mb-4"> Chapitre [6]</h4>
+               <p style="line-height: 2; text-align: justify"> [1] - Quaestor <a href="index_pers.html#Julia_Caesaris_tante" id="Julia_Caesaris_tante" class="perso" target="_blank">Iuliam</a> amitam
+                  uxoremque <a href="index_pers.html#Cornelia_Sulla" id="Cornelia_Sulla" class="perso" target="_blank">Corneliam</a> defunctas laudauit
+                  e more pro rostris.<br> [2] - Et in amitae quidem laudatione de eius ac patris sui utraque origine sic refert: 'Amitae meae <a href="index_pers.html#Julia_Caesaris_tante" id="Julia_Caesaris_tante" class="perso" target="_blank">Iuliae</a> maternum genus ab regibus ortum, paternum cum diis
+                  inmortalibus coniunctum est. nam ab <a href="index_pers.html#Ancus_Marcius" id="Ancus_Marcius" class="perso" target="_blank">Anco Marcio</a> sunt Marcii Reges, quo
+                  nomine fuit mater; a <a href="index_pers.html#Julia_Caesaris_tante" id="Julia_Caesaris_tante" class="perso" target="_blank">Venere
+                     Iulii</a>, cuius gentis familia est nostra. est ergo in genere et sanctitas regum, qui
+                  plurimum inter homines pollent, et caerimonia deorum, quorum ipsi in potestate
+                  sunt reges.'<br> [3] - In <a href="index_pers.html#Cornelia_Sulla" id="Cornelia_Sulla" class="perso" target="_blank">Corneliae</a> autem locum
+                  <a href="index_pers.html#Pompeia" id="Pompeia" class="perso" target="_blank">Pompeiam</a> duxit <a href="index_pers.html#Quintus_Pompeius" id="Quintus_Pompeius" class="perso" target="_blank">Quinti Pompei</a> filiam, <a href="index_pers.html#Lucius_Cornelius_Sulla" id="Lucius_Cornelius_Sulla" class="perso" target="_blank">L. Sullae</a> neptem; cum qua deinde
+                  diuortium fecit adulteratam opinatus a <a href="index_pers.html#Publius_Clodius" id="Publius_Clodius" class="perso" target="_blank">Publio
+                     Clodio</a>, quem inter publicas caerimonias penetrasse ad eam muliebri ueste tam constans fama erat, ut senatus quaestionem de pollutis
+                  sacris decreuerit.<br></p>
+            </div>
+            <div class="col-md-6">
+               <h2 style="text-align: center" class="mt-4">Édition critique</h2>
+               <h3 style="text-align:center" class="mt-4">LIBER I - DIVVS IVLIVS</h3>
+               <h4 style="text-align:center" class="mt-4 mb-4"> Chapitre [1]</h4>
+               <p style="line-height: 2; text-align: justify"> [1] - <span class="mytooltip">Annum agens<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#L</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>Iullius Caesar annum agens</strong></em></td>
+                           </tr>
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#G</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>Gaius Iullius Caesar annum agens</strong></em></td>
+                           </tr>
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#V #O #S #T #Π #Q #ε #R #ρ #dett.</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>Annum agens Caesar</strong></em></td>
+                           </tr>
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#P</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>lacuna</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>Anunum agens ****</strong></em></td>
+                           </tr>
+                        </table></span></span> sextum decimum patrem amisit; sequentibusque consulibus flamen Dialis
+                  destinatus dimissa Cossutia, quae familia
+                  equestri sed admodum diues praetextato desponsata fuerat, Corneliam Cinnae quater
+                  consulis filiam duxit uxorem, ex qua illi mox Iulia nata est; neque ut repudiaret
+                  compelli a dictatore Sulla ullo modo potuit. <br> [2] - Quare et sacerdotio et uxoris dote et gentilicis hereditatibus multatus
+                  diuersarum partium habebatur, ut etiam <span class="mytooltip">discedere<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#M1</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>discere</strong></em></td>
+                           </tr>
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#G #P #O #S #T</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong> discederet</strong></em></td>
+                           </tr>
+                        </table></span></span> e medio et quamquam morbo quartanae adgrauante prope per singulas noctes
+                  commutare latebras cogeretur seque ab inquisitoribus pecunia redimeret, donec per
+                  uirgines Vestales perque Mamercum Aemilium et Aurelium
+                  Cottam propinquos et adfines suos ueniam <span class="mytooltip">impetrauit<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#V</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>impetraurit</strong></em></td>
+                           </tr>
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#L1 #P #O #S #T</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>perpetrauit</strong></em></td>
+                           </tr>
+                        </table></span></span>.<br> [3] - Satis constat Sullam, cum
+                  deprecantibus amicissimis et ornatissimis uiris aliquamdiu denegasset atque illi
+                  pertinaciter contenderent, expugnatum tandem proclamasse siue diuinitus siue
+                  aliqua coniectura: <span class="mytooltip">uincerent<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#M2</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>ulcerint</strong></em></td>
+                           </tr>
+                        </table></span></span> ac sibi haberent, dum modo scirent eum, quem incolumem tanto opere
+                  cuperent, quandoque optimatium partibus, quas secum simul defendissent, exitio
+                  futurum; nam Caesari multos Marios inesse.<br></p>
+               <h4 style="text-align:center" class="mt-4 mb-4"> Chapitre [2]</h4>
+               <p style="line-height: 2; text-align: justify"> [1] - Stipendia prima in Asia fecit Marci
+                  Thermi praetoris contubernio; a quo ad <span class="mytooltip">accersendam<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#M2</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>orthographic</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>arcessendam</strong></em></td>
+                           </tr>
+                        </table></span></span> classem in Bithyniam missus desedit
+                  apud Nicomeden, non sine rumore <span class="mytooltip">prostratae<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#M1 #V1</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>prostatae</strong></em></td>
+                           </tr>
+                           <tr>
+                              <td>Note :</td>
+                              <td>[ae per
+                                 compend.]</td>
+                           </tr>
+                        </table></span></span> regi pudicitiae; quem rumorem auxit intra paucos rursus dies repetita
+                  Bithynia per causam exigendae pecuniae, quae deberetur cuidam libertino clienti
+                  suo.<br> [2] - Reliqua militia secundiore fama fuit et a Thermo in expugnatione Mytilenarum corona ciuica donatus est.<br></p>
+               <h4 style="text-align:center" class="mt-4 mb-4"> Chapitre [3]</h4>
+               <p style="line-height: 2; text-align: justify"> [1] - <span class="mytooltip">Meruit<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#M2 #δ</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>emeruit</strong></em></td>
+                           </tr>
+                        </table></span></span> et sub Seruilio Isaurico in
+                  Cilicia, sed breui tempore.<br> [2] - Nam Sullae morte
+                  comperta, simul spe nouae dissensionis, quae per Marcum Lepidum mouebatur, Romam propere <span class="mytooltip">redit<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#T #dett.</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>rediit</strong></em></td>
+                           </tr>
+                           <tr>
+                              <td>Note :</td>
+                              <td>[uulgo]</td>
+                           </tr>
+                        </table></span></span> et Lepidi quidem
+                  societate, quamquam magnis condicionibus inuitaretur, abstinuit, <span class="mytooltip">cum<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#S #T #Π #Q #R</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>tum</strong></em></td>
+                           </tr>
+                        </table></span></span> ingenio eius diffisus tum <span class="mytooltip">occasione<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#Casaubon</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>occasioni </strong></em></td>
+                           </tr>
+                           <tr>
+                              <td>Note :</td>
+                              <td>[uulgo]</td>
+                           </tr>
+                        </table></span></span>, quam minorem opinione offenderat.<br></p>
+               <h4 style="text-align:center" class="mt-4 mb-4"> Chapitre [4]</h4>
+               <p style="line-height: 2; text-align: justify"> [1] - Ceterum composita seditione ciuili Cornelium Dolabellam consularem et <span class="mytooltip">triumphalem<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#P2 #O2 #S #T #Π #Q #ε #R </td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>triumphalem uirum</strong></em></td>
+                           </tr>
+                        </table></span></span> repetundarum postulauit; absolutoque Rhodum secedere statuit, et ad declinandam inuidiam et ut per
+                  otium ac requiem Apollonio <span class="mytooltip">Moloni<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#G #Π #Q</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>orthographic</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>Miloni</strong></em></td>
+                           </tr>
+                        </table></span></span> clarissimo tunc dicendi magistro operam daret. <br> [2] -  Huc dum hibernis iam mensibus traicit, circa <span class="mytooltip">Pharmacussam<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#G</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>orthographic</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>Pharmacausam</strong></em></td>
+                           </tr>
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#V</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>orthographic</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>pharnacusam</strong></em></td>
+                           </tr>
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#L #P #O #S #T</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>orthographic</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>pharmacusam</strong></em></td>
+                           </tr>
+                        </table></span></span> insulam a praedonibus captus est mansitque apud eos non sine
+                  summa <span class="mytooltip">indignatione<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#Scriverius</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>in dignatione</strong></em></td>
+                           </tr>
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#Orsini</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>dignationes</strong></em></td>
+                           </tr>
+                        </table></span></span> prope quadraginta dies cum uno medico et cubicularis duobus. nam comites
+                  seruosque <span class="mytooltip">ceteros<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#Q #ε #T #Π</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong></strong></em></td>
+                           </tr>
+                        </table></span></span> initio statim ad expediendas pecunias, quibus redimeretur, dimiserat. <br> [3] -  Numeratis deinde quinquaginta talentis expositus in litore non distulit
+                  quin e uestigio classe deducta persequeretur abeuntis ac redactos in potestatem
+                  supplicio, quod saepe illis minatus inter iocum fuerat, adficeret.<br> [4] -  Vastante regiones proximas Mithridate, ne <span class="mytooltip">desidere<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#V #L #P #O #S #T</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>dissidere</strong></em></td>
+                           </tr>
+                        </table></span></span> in discrimine sociorum uideretur, ab Rhodo, quo pertenderat, transiit in Asiam auxiliisque contractis
+                  et praefecto regis prouincia expulso nutantis ac dubias ciuitates retinuit in
+                  fide.<br></p>
+               <h4 style="text-align:center" class="mt-4 mb-4"> Chapitre [5]</h4>
+               <p style="line-height: 2; text-align: justify"> [1] - <span class="mytooltip">Tribunatu<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#Q #ε #T #P #O #T</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>Tribunatum </strong></em></td>
+                           </tr>
+                           <tr>
+                              <td>Note :</td>
+                              <td>[m in O puncio
+                                 notata]</td>
+                           </tr>
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#dett. #Torrentius</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>Tribunatus</strong></em></td>
+                           </tr>
+                        </table></span></span> militum, qui primus Romam reuerso per
+                  suffragia populi honor optigit, <span class="mytooltip">actores<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#Π #Q #ε #R</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>auctoresque</strong></em></td>
+                           </tr>
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#dett.</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>auctores</strong></em></td>
+                           </tr>
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#Graevius</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>actores auctoresque</strong></em></td>
+                           </tr>
+                        </table></span></span> restituendae tribuniciae potestatis, cuius uim Sulla <span class="mytooltip">diminuerat<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#G #V #S #Π #Remacle</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>deminuerat</strong></em></td>
+                           </tr>
+                        </table></span></span>, enixissime iuuit.<br> [2] - L. etiam Cinnae
+                  uxoris fratri, et qui cum eo ciuili discordia Lepidum secuti post necem consulis ad
+                  Sertorium confugerant, reditum in
+                  ciuitatem rogatione Plotia confecit habuitque et ipse super ea re contionem.<br></p>
+               <h4 style="text-align:center" class="mt-4 mb-4"> Chapitre [6]</h4>
+               <p style="line-height: 2; text-align: justify"> [1] - Quaestor Iuliam amitam
+                  uxoremque Corneliam defunctas laudauit
+                  e more pro rostris.<br> [2] - <span class="mytooltip">Et<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#Codices</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>sed</strong></em></td>
+                           </tr>
+                        </table></span></span> in amitae quidem laudatione de eius ac patris sui <span class="mytooltip">utraque origine<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#L #P #O #S #T</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>origine utraque</strong></em></td>
+                           </tr>
+                        </table></span></span> sic refert: 'Amitae meae Iuliae maternum genus ab regibus ortum, paternum cum diis
+                  inmortalibus coniunctum est. nam <span class="mytooltip">ab <span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#P #O #P #S ,#N</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>a</strong></em></td>
+                           </tr>
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#L</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>lacuna</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>a*</strong></em></td>
+                           </tr>
+                           <tr>
+                              <td>Note :</td>
+                              <td>[a* in L]</td>
+                           </tr>
+                        </table></span></span>Anco Marcio sunt Marcii Reges, quo
+                  nomine fuit mater; a Venere
+                  Iulii, <span class="mytooltip">cuius<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#M1</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>cuis</strong></em></td>
+                           </tr>
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#M2</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>cuius</strong></em></td>
+                           </tr>
+                           <tr>
+                              <td>Note :</td>
+                              <td>[in textu sed + cuius in
+                                 marg.]</td>
+                           </tr>
+                        </table></span></span> gentis familia est nostra. est ergo in genere et sanctitas regum, qui
+                  plurimum inter homines pollent, et caerimonia deorum, quorum ipsi in potestate
+                  sunt reges.'<br> [3] - In Corneliae autem locum
+                  Pompeiam duxit Quinti Pompei filiam, L. Sullae neptem; cum qua deinde
+                  diuortium fecit adulteratam opinatus a Publio
+                  Clodio, quem inter publicas caerimonias penetrasse ad <span class="mytooltip">eam<span class="mytooltiptext">
+                        <table class="table table-responsive-sm">
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#T</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>ea</strong></em></td>
+                           </tr>
+                           <tr class="table-info">
+                              <td>Témoin(s) :</td>
+                              <td>#P #O</td>
+                           </tr>
+                           <tr>
+                              <td>Type : </td>
+                              <td>substantive</td>
+                           </tr>
+                           <tr>
+                              <td>Variante :</td>
+                              <td><em><strong>eam</strong></em></td>
+                           </tr>
+                           <tr>
+                              <td>Note :</td>
+                              <td>[Oudendorp]</td>
+                           </tr>
+                        </table></span></span> muliebri ueste tam constans fama erat, ut senatus quaestionem de pollutis
+                  sacris decreuerit.<br></p>
+            </div>
+         </div>
+      </div>
+   </body>
+   <footer>
+      <hr class="style-one">
+      <div class="container">
+         <div class="text-center justify-content-center">
+            <p>Guillaume Cayeux - Site développé dans le cadre des enseignements du <a href="http://www.chartes.psl.eu/fr/cursus/master-technologies-numeriques-appliquees-histoire" target="_blank">Master 2 TNAH</a></p><a href="http://www.chartes.psl.eu/" target="_blank"><img src="./img/logo_enc.png" alt="Logo de l'École des chartes" class="d-inline-block align-text-top rounded float-right" width="225" height="60"></a></div>
+      </div>
+   </footer>
+</html>
